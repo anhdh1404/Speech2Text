@@ -1,0 +1,141 @@
+# ========================
+# Environment & Secrets
+# ========================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+.installed.cfg
+*.manifest
+
+# ========================
+# Virtual Environments
+# ========================
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.virtualenv/
+
+# ========================
+# Jupyter Notebooks
+# ========================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+# Uncomment below if you don't want to track notebooks:
+# *.ipynb
+
+# ========================
+# ML / AI / Model Files
+# ========================
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.onnx
+*.safetensors
+models/weights/
+models/cache/
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+
+# Hugging Face cache
+.cache/
+~/.cache/huggingface/
+
+# ========================
+# Audio / Media Uploads
+# ========================
+audio_upload/
+uploads/
+media/
+*.wav
+*.mp3
+*.mp4
+*.flac
+*.ogg
+*.m4a
+*.webm
+
+# ========================
+# Logs
+# ========================
+*.log
+logs/
+log/
+
+# ========================
+# Testing
+# ========================
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.coverage
+nosetests.xml
+test-results/
+
+# ========================
+# IDEs & Editors
+# ========================
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ========================
+# OS
+# ========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ========================
+# Misc
+# ========================
+*.tmp
+*.temp
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
