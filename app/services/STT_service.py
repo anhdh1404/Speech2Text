@@ -1,5 +1,4 @@
 import os
-from unittest import result
 import shutil
 
 from app.config import UPLOAD_DIR
