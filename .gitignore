@@ -45,8 +45,8 @@ venv.bak/
 # ========================
 .ipynb_checkpoints/
 *.ipynb_checkpoints
-# Uncomment below if you don't want to track notebooks:
-# *.ipynb
+# Ignore notebook files (may contain secrets/tokens)
+*.ipynb
 
 # ========================
 # ML / AI / Model Files
