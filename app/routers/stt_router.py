@@ -16,15 +16,22 @@ async def transcribe(file: UploadFile = File(...)):
     contents = await file.read()
 
     if len(contents) > MAX_FILE_SIZE:
-        raise HTTPException(status_code=400, detail=f"File size exceeds the maximum limit of {MAX_FILE_SIZE_MB} MB.")
+        raise HTTPException(
+            status_code=400,
+            detail=f"File size exceeds the maximum limit of {MAX_FILE_SIZE_MB} MB."
+        )
+
     if file.content_type not in ALLOWED_AUDIO_TYPES:
-        raise HTTPException(status_code=400, detail="Unsupported file type. Please upload a valid audio file.")
-    
+        raise HTTPException(
+            status_code=400,
+            detail="Unsupported file type. Please upload a valid audio file."
+        )
+
+    # reset pointer
+    file.file.seek(0)
+
     result = await run_in_threadpool(speech_to_text, file)
 
-
-    return {
-        "dialogues": result
-    }
+    return {"dialogues": result}
 
 
