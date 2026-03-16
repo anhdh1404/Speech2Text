@@ -15,7 +15,10 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # copy toàn bộ project
-COPY . .
+COPY app ./app
+COPY main.py .
+COPY schemas.py .
+COPY config.py .
 
 # tạo thư mục upload
 RUN mkdir -p audio_upload

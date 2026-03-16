@@ -12,3 +12,7 @@ outputs
 .vscode
 .idea   
 
+*.pt
+*.bin
+*.safetensors
+.cache
