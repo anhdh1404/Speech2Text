@@ -13,6 +13,5 @@ model = whisperx.load_model(
     compute_type=COMPUTE_TYPE
 )
 
-@app.on_event("startup")
 def get_model():
     return model
