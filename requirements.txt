@@ -4,4 +4,4 @@ whisperx
 torch
 torchaudio
 python-dotenv
-
+python-multipart

@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+  stt-api:
+    build: .
+    image: stt-api-re
+    container_name: stt-api
+
+    ports:
+      - "8000:8000"
+
+    env_file:
+      - .env
+
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+
+    volumes:
+      - ./app:/app/app
+      - ./audio_upload:/app/audio_upload
+    restart: unless-stopped
+
+    deploy:
+      resources:
+        limits:
+          memory: 6g
